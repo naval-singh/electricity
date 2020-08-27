@@ -1,0 +1,50 @@
+<html>
+    <center>
+        <h2>Madhya Pradesh Electricity Board</h2>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Category</th>
+            </tr>
+            <tr>
+                <td><%= customer.id %></td>
+                <td><%= customer.name %></td>
+                <td><%= customer.address %></td>
+                <td><%= customer.category %></td>
+            </tr>
+        </table>
+        <br>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tr>
+                <th>Current Reading</th>
+                <th>Previous Reading</th>
+                <th>Consumed Units</th>
+                <th>Rate/unit</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td><%= customer.currentReading %></td>
+                <td><%= customer.prevReading %></td>
+                <td><%= bill.units %></td>
+                <td>Rs.<%= bill.rate %>/unit</td>
+                <td>Rs.<%= bill.amount %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>GST(18%)</td>
+                <td>Rs.<%= bill.gst %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>Net Amount</td>
+                <td><strong>Rs.<%= bill.netAmount %></strong></td>
+            </tr>
+        </table>
+    </center>
+</html>
